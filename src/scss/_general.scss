@@ -1,0 +1,19 @@
+body {
+    background-color: $background;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    & .section {
+        width: 100%;
+        color: white;
+        &.section1 {
+            height: 100vh;
+            background-color: #14202c;
+        }
+    }
+}

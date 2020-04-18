@@ -1,0 +1,13 @@
+.social-media {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+    li {
+        margin-right: 15px;
+    }
+}
