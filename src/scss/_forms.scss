@@ -1,0 +1,25 @@
+.btn-primary {
+    padding: 15px 70px;
+    background-color: $primaryColor;
+    color: $background;
+    border: 0;
+    border-radius: 0;
+    font-weight: bold;
+    &:hover {
+        background-color: white;
+        color: $primaryColor;
+    }
+    &.small {
+        padding: 10px 40px;
+    }
+}
+
+.form-control {
+    border: none;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+    outline: 0;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
