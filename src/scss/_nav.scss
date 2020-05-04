@@ -2,12 +2,26 @@ header {
     display: grid;
     grid-template-columns: 35% 1fr;
     padding: 30px;
-    position: absolute;
+    padding-bottom: 0;
+    position: fixed;
     width: 100%;
     z-index: 2;
     .logo {
-        img {
-            max-width: 150px;
+        .container-1-logo {
+            width: 150px;
+            overflow: hidden;
+            transition: 0.3s;
+            .container-2-logo {
+                width: 150px;
+                img {
+                    opacity: 0;
+                    width: 100%;
+                }
+            }
+            &.small {
+                width: 40px;
+                transform: scale(0.8);
+            }
         }
     }
 }
@@ -17,6 +31,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    opacity: 0;
     .list-menu {
         width: 100%;
         &.active {
@@ -43,7 +58,7 @@ nav {
                 position: relative;
                 text-rendering: geometricPrecision;
                 &::after {
-                    background: white;
+                    background: $primaryColor;
                     content: "";
                     width: 120%;
                     height: 0px;
@@ -54,18 +69,12 @@ nav {
                     margin-bottom: -2px;
                     transition: 0.3s;
                 }
-                &.active {
-                    &::after {
-                        height: 10px;
-                        background-color: #27aae1;
-                    }
-                }
                 &:hover {
                     color: black;
                     text-decoration: none;
                     &::after {
                         height: 24px;
-                        background-color: white;
+                        background-color: $primaryColor;
                     }
                 }
             }
@@ -76,6 +85,7 @@ nav {
 .hamburger {
     margin-left: 60px;
     padding-right: 0;
+    outline: 0;
 }
 
 @media (max-width: 992px) { 

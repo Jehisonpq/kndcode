@@ -1,5 +1,5 @@
 .scroll {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 50%;
     margin-left: -8px;
@@ -7,11 +7,19 @@
     color: white;
     font-family: 'Bebas Neue', cursive;
     font-size: 14px;
-    z-index: 1;
-    animation-delay: 5s !important;
-    animation-iteration-count: 8 !important;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
     p {
         transform: rotate(270deg);
         line-height: 0.5;
+        color: white;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    &:hover {
+        opacity: 0.6;
     }
 }

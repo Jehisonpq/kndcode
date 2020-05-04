@@ -1,9 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss";
-@import "~animate.css/animate.min.css";
+@import "~slick-carousel/slick/slick.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 @import "variables";
 @import "loader";
@@ -13,3 +14,6 @@
 @import "social-media";
 @import "lang";
 @import "parallax";
+@import "slider";
+@import "forms";
+

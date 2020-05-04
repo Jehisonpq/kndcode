@@ -11,28 +11,33 @@
 			<li id="lado1"></li>
 			<li id="lado2"></li>
 		</ul>
-		<div class="wrapper">
-			<div class="rect"></div>
-			<div class="rect"></div>
-			<div class="rect"></div>
-			<div class="rect"></div>
-			<div class="rect"></div>
-			<div class="rect"></div>
-		</div>
+		<div id="load">
+			<div>G</div>
+			<div>N</div>
+			<div>I</div>
+			<div>D</div>
+			<div>A</div>
+			<div>O</div>
+			<div>L</div>
+		  </div>
 	</div>
 	<header>
 		<div class="logo">
-			<img src="images/logo.png" alt="" class="img-responsive">
+			<div class="container-1-logo">
+				<div class="container-2-logo">
+					<img src="images/logo.png" alt="" id="logo">
+				</div>
+			</div>
 		</div>
-		<nav>
+		<nav id="menu">
 			<div id="list-menu" class="list-menu active">
 				<ul>
-					<li><a class="active" href="#">Home</a></li>
-					<li><a href="#">About us</a></li>
-					<li><a href="#">Technologies</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Cases</a></li>
-					<li><a href="#"><img src="images/mail.png" alt=""></a></li>
+					<li><a class="active" href="#section1">Home</a></li>
+					<li><a href="#section-about">About us</a></li>
+					<li><a href="#section-techno">Technologies</a></li>
+					<li><a href="#section-services">Services</a></li>
+					<li><a href="#section-cases">Cases</a></li>
+					<li><a href="#section3"><img src="images/mail.png" alt=""></a></li>
 				</ul>
 			</div>
 			<button class="hamburger hamburger--slider is-active" type="button">
@@ -51,56 +56,425 @@
 		<li><a href="#"><img src="images/icon-facebook.png" alt=""> </a></li>
 		<li><a href="#"><img src="images/icon-instagram.png" alt=""> </a></li>
 	</ul>
-	<div id="scroll" class="scroll animated infinite fadeInDown delay-5s">
-		<p>SCROLL</p>
-		<img src="images/scroll.png" alt="">
+	<div id="scroll" class="scroll">
+		<a href="#section-about" id="scroll-link">
+			<p>SCROLL</p>
+			<img src="images/scroll.png" alt="">
+		</a>
 	</div>
 	<div class="container-app">
-		<section id="section1" class="section section1">
-			<div id="parallax" class="parallax">
-				<div class="fondo layer" data-depth="0.6"></div>
-                <div class="cube cube1 layer" data-depth="1.5">
-					<div class="container-img-cube">
-						<img src="images/cube6.png" alt="">
+		<section id="section1" class="section section1 section-home">
+			<div class="continer-section1">
+				<div id="parallax" class="parallax">
+					<div class="points">
+						<div class="container-point point1" data-toggle="tooltip" title="&lt; Asp.Net &gt;">
+							<div class="pointOut"></div>
+							<div class="pointIn"></div>
+						</div>
+						<div class="container-point point2" data-toggle="tooltip" title="{ Silver Data Analytics }">
+							<div class="pointOut"></div>
+							<div class="pointIn"></div>
+						</div>
+						<div class="container-point point3" data-toggle="tooltip" title="&lt; REST Web Services &gt;">
+							<div class="pointOut"></div>
+							<div class="pointIn"></div>
+						</div>
+						<div class="container-point point4" data-toggle="tooltip" title="{ Microsoft Partner }">
+							<div class="pointOut"></div>
+							<div class="pointIn"></div>
+						</div>
+						<div class="container-point point5" data-toggle="tooltip" title="[ Web Services 2.0 ]">
+							<div class="pointOut"></div>
+							<div class="pointIn"></div>
+						</div>
 					</div>
-                </div>
-                <div class="cube cube2 layer" data-depth="1.6">
-					<div class="container-img-cube">
-						<img src="images/cube2.png" alt="">
+					<div class="fondo-container layer" data-depth="0.6">
+						<div class="fondo"></div>
 					</div>
-                </div>
-                <div class="cube cube3 layer" data-depth="2.5">
-					<div class="container-img-cube">
-						<img src="images/cube6.png" alt="">
+					<div class="cube cube1 layer" data-depth="1.5">
+						<div class="container-img-cube">
+							<img src="images/cube6.png" alt="">
+						</div>
 					</div>
-                </div>
-                <div class="cube cube4 layer" data-depth="0.9">
-					<div class="container-img-cube">
-						<img src="images/cube1.png" alt="">
+					<div class="cube cube2 layer" data-depth="1.6">
+						<div class="container-img-cube">
+							<img src="images/cube2.png" alt="">
+						</div>
+					</div>
+					<div class="cube cube3 layer" id="cube3" data-depth="2.5">
+						<div class="container-img-cube">
+							<img src="images/cube6.png" alt="">
+						</div>
+					</div>
+					<div class="cube cube4 layer" data-depth="0.9">
+						<div class="container-img-cube">
+							<img src="images/cube1.png" alt="">
+						</div>
+					</div>
+					<div class="cube cube5 layer" data-depth="1.5">
+						<div class="container-img-cube">
+							<img src="images/cube6.png" alt="">
+						</div>
+					</div>
+					<div class="cube cube6 layer" data-depth="0.8">
+						<div class="container-img-cube">
+							<img src="images/cube1.png" alt="">
+						</div>
+					</div>
+					<div class="cube cube7 layer" data-depth="1.1">
+						<div class="container-img-cube">
+							<img src="images/cube2.png" alt="">
+						</div>
+					</div>
+					<div class="cube cube8 layer" data-depth="1.5">
+						<div class="container-img-cube">
+							<img src="images/cube1.png" alt="">
+						</div>
+					</div>
+	
+					<div class="copy" id="copy">
+						<div class="copy1">
+							<h1>
+								<span class="blue">KING</span>
+								<span>DOM</span>
+								<span>CODE</span>
+							</h1>
+						</div>
+						<div class="copy2">
+							<h3 id="text">We become your <span>strategic partners,</span> top notch <span>outsourcing</span> services.</h3>
+						</div>
 					</div>
 				</div>
-
-				<div class="copy" id="copy">
-                    <div>
-                        <h1>
-                            <span>KING</span><br>
-                            DOM<br>
-                            CODE
-                        </h1>
-                    </div>
-                    <div>
-                        <h3>We become your 
-                            <span>strategic partners,</span> 
-                            top notch <span>outsourcing</span> 
-                            services.</h3>
-                    </div>
-                </div>
 			</div>
 		</section>
 		<section id="section2" class="section section2">
+			<div class="section-left">
+				<div class="section-home section-home-int section-about" id="section-about">
+
+					<div class="container-title">
+						<h4 class="title-section">about US</h4>
+					</div>
+
+					<div class="container-info">
+						<h3 class="subtitle gray">About us</h3>
+						<h2 class="title blue">Software development can be expensive, time-consuming, and risky.</h2>
+						<p class="text">We provide a unique, affordable and reliable end-to-end nearshore software development. <br><br>
+
+							If what you are looking for your company is quality work, accuracy, cost-effective and speed, Kingdom Code is your best option. We provide top quality technology talent, guarantee cultural affinity, geographical proximity and time zone, reductions of cost, a high level of quality and the work is delivered over time stipulated.<br><br>
+							
+							We become your strategic partners, top notch outsourcing services with confidence.<br><br>
+							
+							We are a call away from you. Contact us today!</p>
+						
+							<a class="btn btn-primary mt-4 small" href="#">Read more</a>
+					</div>
+				</div>
+				<div class="section-home section-home-int section-techno" id="section-techno">
+
+					<div class="container-title">
+						<h4 class="title-section">TECHNOLOGIES</h4>
+					</div>
+
+					<div class="container-info">
+						<h3 class="subtitle gray">TECHNOLOGIES</h3>
+						<h2 class="title blue">Application development in multiple technologies.</h2>
+						<p class="text">We usually work for application development companies, IT companies or technology companies and follows their technology of choice. <br><br>
+
+							We are currently working in the technologies listed below. In case a specific technology is not available, our HR department recruits as per client specification.<br> <br>
+							
+							Insoft also has partnerships with all major training institutions and Universities, where current staff are retrained if required on short notice by certified instructors.</p>
+					
+					</div>
+				</div>
+				<div class="section-home section-home-int section-services" id="section-services">
+
+					<div class="container-title">
+						<h4 class="title-section">SERVICES</h4>
+					</div>
+
+					<div class="container-info">
+						<h3 class="subtitle gray">SERVICES</h3>
+						<h2 class="title blue">Scale your Technical Team.</h2>
+						<p class="text">Whether it’s developing a new product, modernizing an existing app or ramping up your dev team, KNDCODE has the experience and capabilities to fulfill your expectations. <br><br>
+
+							We are your tech partner for project definition, application design, and technical software development</p>
+					</div>
+				</div>
+				<div class="section-home section-home-int section-cases" id="section-cases">
+
+					<div class="container-title">
+						<h4 class="title-section">CASES</h4>
+					</div>
+
+					<div class="container-info">
+						<h3 class="subtitle gray">CASES</h3>
+						<h2 class="title blue">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+						<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br><br>
+
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section-right">
+
+				<div class="section-images visible" id="section-images-about">
+					<div class="image-container">
+						<img src="images/section-about.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="section-images" id="section-images-techno">
+					<div class="slider">
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">01</div>
+								<div class="info">
+									<h3 class="subtitle">Microsoft Technologies</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<span data-toggle="modal" data-target="#exampleModalLong">
+									<a class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+										<span class="line1"></span>
+										<span class="line2"></span>
+									</a>
+								</span>
+							</div>
+							<img src="images/section-techno1.jpg" alt="">
+						</div>
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">02</div>
+								<div class="info">
+									<h3 class="subtitle">Open Source Technologies</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<span data-toggle="modal" data-target="#exampleModalLong">
+									<a class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+										<span class="line1"></span>
+										<span class="line2"></span>
+									</a>
+								</span>
+							</div>
+							<img src="images/section-techno2.jpg" alt="">
+						</div>
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">03</div>
+								<div class="info">
+									<h3 class="subtitle">AdditionalTechnologies</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<span data-toggle="modal" data-target="#exampleModalLong">
+									<a class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+										<span class="line1"></span>
+										<span class="line2"></span>
+									</a>
+								</span>
+							</div>
+							<img src="images/section-techno3.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="section-images" id="section-images-services">
+					<div class="slider">
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">01</div>
+								<div class="info">
+									<h3 class="subtitle">Aplication Services</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2 class="title">
+								</div>
+								<a href="#" class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+									<span class="line1"></span>
+									<span class="line2"></span>
+								</a>
+							</div>
+							<img src="images/section-services1.jpg" alt="">
+						</div>
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">02</div>
+								<div class="info">
+									<h3 class="subtitle">Data Services </h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<a href="#" class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+									<span class="line1"></span>
+									<span class="line2"></span>
+								</a>
+							</div>
+							<img src="images/section-services2.jpg" alt="">
+						</div>
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">03</div>
+								<div class="info">
+									<h3 class="subtitle">Service Desk</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<a href="#" class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+									<span class="line1"></span>
+									<span class="line2"></span>
+								</a>
+							</div>
+							<img src="images/section-services3.jpg" alt="">
+						</div>
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">04</div>
+								<div class="info">
+									<h3 class="subtitle">QA</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<a href="#" class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+									<span class="line1"></span>
+									<span class="line2"></span>
+								</a>
+							</div>
+							<img src="images/section-services4.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="section-images" id="section-images-cases">
+					<div class="slider">
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">01</div>
+								<div class="info">
+									<h3 class="subtitle">Citibank</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<a href="#" class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+									<span class="line1"></span>
+									<span class="line2"></span>
+								</a>
+							</div>
+							<img src="images/section-cases1.jpg" alt="">
+						</div>
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">02</div>
+								<div class="info">
+									<h3 class="subtitle">Wells Fargo</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<a href="#" class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+									<span class="line1"></span>
+									<span class="line2"></span>
+								</a>
+							</div>
+							<img src="images/section-cases2.jpg" alt="">
+						</div>
+						<div class="slide">
+							<div class="container-slide">
+								<div class="number">03</div>
+								<div class="info">
+									<h3 class="subtitle">Black & Decker</h3>
+									<h2 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+								</div>
+								<a href="#" class="btn-more" data-toggle="tooltip" title="view more" data-placement="right">
+									<span class="line1"></span>
+									<span class="line2"></span>
+								</a>
+							</div>
+							<img src="images/section-cases3.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</section>
-		<section id="section3" class="section section3">
+		<section id="section3" class="section section3 section-home">
+			<div class="container">
+				<dor class="row">
+					<div class="col">
+						<h3 class="subtitle gray text-right">
+							CONTACT US
+						</h3>
+						<h2 class="title text-right mb-5">
+							You had us at "Hello." <br> Let's make something <br><span>great together.</span>
+						</h2>
+						<p class="text-right blue">
+							Noblesville, IN 46062 USA <br>
+							contact@kndcode.com
+						</p>
+					</div>
+					<div class="col">
+						<form action="">
+							<div class="form-row">
+								<div class="col">
+									<input class="form-control form-control-lg" type="text" placeholder="Name" id="name" autocomplete="off">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col">
+									<input class="form-control form-control-lg" type="email" placeholder="Email" id="email" autocomplete="off">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col">
+									<input class="form-control form-control-lg" type="tel" placeholder="Phone" id="phone" autocomplete="off">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col">
+									<textarea class="form-control" placeholder="Message" id="" cols="30" rows="4" autocomplete="off"></textarea>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col">
+									<button type="submit" class="btn btn-primary">SEND</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</dor>
+			</div>
+			<footer class="container-fluid pt-5">
+				<p class="gray text-center mt-5">© 2020 Kingdom Code Inc.</p>
+			</footer>
 		</section>
+
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<li>Silver Data Analytics</li>
+						<li>Microsoft Partner </li>
+						<li>Asp.Net</li>
+						<li>WCF - Windows Communication Foundation</li>
+						<li>Web Services 2.0 (.asmx)</li>
+						<li>WPF - Windows Presentation Foundation</li>
+						<li>Console Applications</li>
+						<li>Windows Forms Application</li>
+						<li>REST Web Services</li>
+						<li>Intranet, Extranet and Interne</li>
+						<li>Share Point</li>
+						<li>Crystal reports,</li>
+						<li>Microsoft Reports</li>
+						<li>DevExpress</li>
+						<li>Telerik</li>
+						<li>XCeed & Infragestics</li>
+						<li>ORM Tools - LLBGenpro</li>
+						<li>SSRS - SQL Server Reporting Services</li>
+						<li>SSAS, SQL Server Analysis Services</li>
+						<li>SSIS - SQL Server Integration Services</li>
+						<li>Biztalk</li>
+						<li>Mulesoft</li>
+						<li>Nunit, Pex</li>
+					</ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
 	</div>
 </body>
 </html>

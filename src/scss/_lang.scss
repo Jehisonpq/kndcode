@@ -1,12 +1,13 @@
 .lang {
-    position: absolute;
+    position: fixed;
     top: 48%;
     right: 30px;
-    z-index: 1;
+    z-index: 2;
     color: white;
     font-size: 15px;
     font-weight: 700;
     text-align: right;
+    opacity: 0;
     li {
         margin-bottom: 15px;
         list-style: none;
