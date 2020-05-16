@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KNDCODE</title>
+	<title>KNDCODE</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 <link href="css/main.css" rel="stylesheet"></head>
 <body>
 	<div class="loader">
@@ -30,8 +32,8 @@
 			</div>
 		</div>
 		<nav id="menu">
-			<div id="list-menu" class="list-menu active">
-				<ul>
+			<div id="list-menu" class="list-menu">
+				<ul class="primary-menu">
 					<li><a class="active" href="#section1">Home</a></li>
 					<li><a href="#section-about">About us</a></li>
 					<li><a href="#section-techno">Technologies</a></li>
@@ -39,23 +41,23 @@
 					<li><a href="#section-cases">Cases</a></li>
 					<li><a href="#section3"><img src="images/mail.png" alt=""></a></li>
 				</ul>
+				<ul class="lang">
+					<li><a href="#">EN</a></li>
+					<li><a href="#">ES</a></li>
+				</ul>
+				<ul class="social-media">
+					<li><a href="#"><img src="images/icon-twitter.png" alt=""> </a></li>
+					<li><a href="#"><img src="images/icon-facebook.png" alt=""> </a></li>
+					<li><a href="#"><img src="images/icon-instagram.png" alt=""> </a></li>
+				</ul>
 			</div>
-			<button class="hamburger hamburger--slider is-active" type="button">
+			<button class="hamburger hamburger--slider" type="button">
 				<span class="hamburger-box">
 				  <span class="hamburger-inner"></span>
 				</span>
 			</button>
 		</nav>
 	</header>
-	<ul class="lang">
-		<li><a href="#">EN</a></li>
-		<li><a href="#">ES</a></li>
-	</ul>
-	<ul class="social-media">
-		<li><a href="#"><img src="images/icon-twitter.png" alt=""> </a></li>
-		<li><a href="#"><img src="images/icon-facebook.png" alt=""> </a></li>
-		<li><a href="#"><img src="images/icon-instagram.png" alt=""> </a></li>
-	</ul>
 	<div id="scroll" class="scroll">
 		<a href="#section-about" id="scroll-link">
 			<p>SCROLL</p>
@@ -65,73 +67,7 @@
 	<div class="container-app">
 		<section id="section1" class="section section1 section-home">
 			<div class="continer-section1">
-				<div id="parallax" class="parallax">
-					<div class="points">
-						<div class="container-point point1" data-toggle="tooltip" title="&lt; Asp.Net &gt;">
-							<div class="pointOut"></div>
-							<div class="pointIn"></div>
-						</div>
-						<div class="container-point point2" data-toggle="tooltip" title="{ Silver Data Analytics }">
-							<div class="pointOut"></div>
-							<div class="pointIn"></div>
-						</div>
-						<div class="container-point point3" data-toggle="tooltip" title="&lt; REST Web Services &gt;">
-							<div class="pointOut"></div>
-							<div class="pointIn"></div>
-						</div>
-						<div class="container-point point4" data-toggle="tooltip" title="{ Microsoft Partner }">
-							<div class="pointOut"></div>
-							<div class="pointIn"></div>
-						</div>
-						<div class="container-point point5" data-toggle="tooltip" title="[ Web Services 2.0 ]">
-							<div class="pointOut"></div>
-							<div class="pointIn"></div>
-						</div>
-					</div>
-					<div class="fondo-container layer" data-depth="0.6">
-						<div class="fondo"></div>
-					</div>
-					<div class="cube cube1 layer" data-depth="1.5">
-						<div class="container-img-cube">
-							<img src="images/cube6.png" alt="">
-						</div>
-					</div>
-					<div class="cube cube2 layer" data-depth="1.6">
-						<div class="container-img-cube">
-							<img src="images/cube2.png" alt="">
-						</div>
-					</div>
-					<div class="cube cube3 layer" id="cube3" data-depth="2.5">
-						<div class="container-img-cube">
-							<img src="images/cube6.png" alt="">
-						</div>
-					</div>
-					<div class="cube cube4 layer" data-depth="0.9">
-						<div class="container-img-cube">
-							<img src="images/cube1.png" alt="">
-						</div>
-					</div>
-					<div class="cube cube5 layer" data-depth="1.5">
-						<div class="container-img-cube">
-							<img src="images/cube6.png" alt="">
-						</div>
-					</div>
-					<div class="cube cube6 layer" data-depth="0.8">
-						<div class="container-img-cube">
-							<img src="images/cube1.png" alt="">
-						</div>
-					</div>
-					<div class="cube cube7 layer" data-depth="1.1">
-						<div class="container-img-cube">
-							<img src="images/cube2.png" alt="">
-						</div>
-					</div>
-					<div class="cube cube8 layer" data-depth="1.5">
-						<div class="container-img-cube">
-							<img src="images/cube1.png" alt="">
-						</div>
-					</div>
-	
+				<div id="content-section1" class="content-section1">
 					<div class="copy" id="copy">
 						<div class="copy1">
 							<h1>
@@ -144,6 +80,8 @@
 							<h3 id="text">We become your <span>strategic partners,</span> top notch <span>outsourcing</span> services.</h3>
 						</div>
 					</div>
+					<video playsinline autoplay muted loop id="myVideo">
+						<source src="video/video.mp4" type="video/mp4"></video>
 				</div>
 			</div>
 		</section>
@@ -217,13 +155,13 @@
 			</div>
 			<div class="section-right">
 
-				<div class="section-images visible" id="section-images-about">
+				<div class="section-images visible" id="section-images-about" id-data="section-about">
 					<div class="image-container">
 						<img src="images/section-about.jpg" alt="">
 					</div>
 				</div>
 
-				<div class="section-images" id="section-images-techno">
+				<div class="section-images" id="section-images-techno" id-data="section-techno">
 					<div class="slider">
 						<div class="slide">
 							<div class="container-slide">
@@ -276,7 +214,7 @@
 					</div>
 				</div>
 
-				<div class="section-images" id="section-images-services">
+				<div class="section-images" id="section-images-services" id-data="section-services">
 					<div class="slider">
 						<div class="slide">
 							<div class="container-slide">
@@ -337,7 +275,7 @@
 					</div>
 				</div>
 
-				<div class="section-images" id="section-images-cases">
+				<div class="section-images" id="section-images-cases" id-data="section-cases">
 					<div class="slider">
 						<div class="slide">
 							<div class="container-slide">
@@ -388,15 +326,15 @@
 		</section>
 		<section id="section3" class="section section3 section-home">
 			<div class="container">
-				<dor class="row">
-					<div class="col">
-						<h3 class="subtitle gray text-right">
+				<div class="row">
+					<div class="col info-section">
+						<h3 class="subtitle gray">
 							CONTACT US
 						</h3>
-						<h2 class="title text-right mb-5">
+						<h2 class="title mb-5">
 							You had us at "Hello." <br> Let's make something <br><span>great together.</span>
 						</h2>
-						<p class="text-right blue">
+						<p class="blue">
 							Noblesville, IN 46062 USA <br>
 							contact@kndcode.com
 						</p>
@@ -430,7 +368,7 @@
 							</div>
 						</form>
 					</div>
-				</dor>
+				</div>
 			</div>
 			<footer class="container-fluid pt-5">
 				<p class="gray text-center mt-5">© 2020 Kingdom Code Inc.</p>
@@ -476,5 +414,9 @@
 			</div>
 		  </div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="bundle.js"></script></body>
 </html>
