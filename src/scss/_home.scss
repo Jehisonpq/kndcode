@@ -1,0 +1,212 @@
+.container-app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 992px) {
+    overflow: hidden;
+  }
+  .section {
+    width: 100%;
+    color: white;
+    z-index: 0;
+    &.section1 {
+      height: 100vh;
+      z-index: 1;
+      background-color: #0d131f;
+      background: rgb(3, 22, 33);
+      background: linear-gradient(
+        0deg,
+        rgba(3, 22, 33, 1) 0%,
+        rgba(6, 9, 16, 1) 62%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      /*&::before {
+                  content: "";
+                  width: 100%;
+                  height: 100px;
+                  position: absolute;
+                  bottom: 0;
+                  z-index: 1;
+                  left: 0;
+                  opacity: 0.9;
+                  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(9,15,26,1) 52%);
+              }
+              &::after {
+                  content: "";
+                  width: 100%;
+                  height: 100px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  opacity: 0.9;
+                  background: linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(9,15,26,1) 52%);
+              }*/
+    }
+    &.section3 {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      background: url("../images/fondo-contacto.jpg") $background;
+      background-size: cover;
+      padding: 150px 0 50px 0;
+      .info-section {
+        text-align: right;
+        @media (max-width: 992px) {
+          text-align: left;
+          padding: 0px 30px 50px 30px;
+        }
+      }
+    }
+  }
+}
+
+.section-left {
+  height: auto;
+  width: 50%;
+  padding: 50px 0;
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+  .section-home-int {
+    padding: 110px 0 30px 0;
+    position: relative;
+    .container-title {
+      transform: rotate(-90deg) translate3d(0%, 0%, 0);
+      position: absolute;
+      top: 70%;
+      transition: 0.3s;
+      right: 28px;
+      transform-origin: top right;
+      z-index: 1;
+      @media (max-width: 992px) {
+        right: 33px;
+        top: 10% !important;
+      }
+      .title-section {
+        text-transform: uppercase;
+        font-family: "Bebas Neue";
+        font-size: 45px;
+        line-height: 1;
+      }
+    }
+    .container-info {
+      padding: 0 100px;
+      @media (max-width: 992px) {
+        padding: 0 70px 0 30px;
+      }
+      .title {
+        margin-bottom: 50px;
+        max-width: 350px;
+      }
+    }
+  }
+  .section-images {
+    width: 100%;
+    height: 500px;
+    display: block;
+    transition: 1s cubic-bezier(0.67, 0.02, 0.2, 0.97);
+    overflow: hidden;
+    background: black;
+    position: relative;
+    margin-top: 60px;
+    * {
+      opacity: 1 !important;
+    }
+    .slider {
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      transition: 1s cubic-bezier(0.67, 0.02, 0.2, 0.97);
+      .slick-list {
+        height: inherit;
+        width: inherit;
+        .slick-track {
+          height: inherit;
+          width: inherit;
+          .slick-slide {
+            height: inherit;
+            width: inherit;
+            > div {
+              height: inherit;
+              width: inherit;
+            }
+          }
+        }
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .image-container {
+      transition: 1s cubic-bezier(0.67, 0.02, 0.2, 0.97);
+      height: inherit;
+      width: inherit;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 1.2s cubic-bezier(0.67, 0.02, 0.2, 0.97) 0.65s;
+      }
+    }
+  }
+}
+
+.section-right {
+  position: fixed;
+  height: 100vh;
+  width: 50vw;
+  top: 0;
+  right: 0;
+  .section-images {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    z-index: 99;
+    display: block;
+    transition: 1s cubic-bezier(0.67, 0.02, 0.2, 0.97);
+    overflow: hidden;
+    background: black;
+    .slider {
+      position: absolute;
+      left: -30vw;
+      height: inherit;
+      width: 52vw;
+      transition: 1s cubic-bezier(0.67, 0.02, 0.2, 0.97);
+      img {
+        height: 100vh;
+        width: 60vw;
+        object-fit: cover;
+      }
+    }
+    .image-container {
+      position: absolute;
+      left: -30vw;
+      transition: 1s cubic-bezier(0.67, 0.02, 0.2, 0.97);
+      img {
+        height: 100vh;
+        width: 60vw;
+        object-fit: cover;
+        right: 0;
+        left: auto;
+        display: block;
+        transition: 1.2s cubic-bezier(0.67, 0.02, 0.2, 0.97) 0.65s;
+      }
+    }
+    &.visible {
+      width: 60vw;
+      .image-container,
+      .slider {
+        left: 0vw;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    display: none;
+  }
+}

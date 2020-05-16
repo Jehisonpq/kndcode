@@ -1,0 +1,29 @@
+.modal-content {
+  background: black;
+  color: white;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-body {
+  padding: 3rem;
+  ul {
+    padding: 0;
+    text-align: center;
+    li {
+      list-style-type: none;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.close {
+  text-shadow: none;
+  color: white;
+  font-weight: 100;
+  font-size: 3rem;
+  opacity: 1;
+  font-family: "Montserrat", sans-serif;
+}
