@@ -25,7 +25,7 @@ const animation = () => {
       { ease: "back", duration: 1, opacity: 1, x: 0 }
     )
     .fromTo(
-      ".copy2 h3",
+      ".copy2 p",
       { opacity: 0, x: -100 },
       { ease: "back", duration: 1, opacity: 1, x: 0 },
       0.5

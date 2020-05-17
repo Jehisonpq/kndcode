@@ -896,7 +896,7 @@ header .logo .container-1-logo.small {
     font-size: 90px;
   }
 }
-.content-section1 .copy h3 {
+.content-section1 .copy .copy2 p {
   font-family: "Montserrat", sans-serif;
   margin-left: 20px;
   font-size: 19px;
@@ -907,12 +907,12 @@ header .logo .container-1-logo.small {
   width: 240px;
   opacity: 0;
 }
-.content-section1 .copy h3 span {
+.content-section1 .copy .copy2 p span {
   color: #27aae1;
   font-weight: bold;
 }
 @media (max-width: 992px) {
-  .content-section1 .copy h3 {
+  .content-section1 .copy .copy2 p {
     width: 100%;
     padding-right: 20px;
     font-size: 14px;
