@@ -26,6 +26,8 @@ window.onload = function () {
     changeImage(idSeccion, idSeccionImagen);
   }
 
+  changeImage("#section1");
+
   /*changeImage("#section-about", "#section-images-about");
   changeImage("#section-techno", "#section-images-techno");
   changeImage("#section-services", "#section-images-services");
