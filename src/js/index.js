@@ -28,17 +28,12 @@ window.onload = function () {
 
   changeImage("#section1");
 
-  /*changeImage("#section-about", "#section-images-about");
-  changeImage("#section-techno", "#section-images-techno");
-  changeImage("#section-services", "#section-images-services");
-  changeImage("#section-cases", "#section-images-cases");
-  changeImage("#section1");*/
-
   const modales = document.querySelectorAll("[data-toggle='modal']");
 
   for (let i = 0; i < modales.length; i++) {
     let modal = modales[i];
     modal.addEventListener("click", function () {
+      console.log("abrio modal");
       let contenido = this.nextSibling.nextElementSibling.innerHTML;
       let modalContainer = document.querySelector(".modal-body");
 
