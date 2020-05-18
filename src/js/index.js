@@ -34,6 +34,18 @@ window.onload = function () {
   changeImage("#section-cases", "#section-images-cases");
   changeImage("#section1");*/
 
+  const modales = document.querySelectorAll("[data-toggle='modal']");
+
+  for (let i = 0; i < modales.length; i++) {
+    let modal = modales[i];
+    modal.addEventListener("click", function () {
+      let contenido = this.nextSibling.nextElementSibling.innerHTML;
+      let modalContainer = document.querySelector(".modal-body");
+
+      modalContainer.innerHTML = contenido;
+    });
+  }
+
   sliderMobile();
   allSliders();
 

@@ -334,6 +334,10 @@ body.theme-white {
   line-height: 1.8;
 }
 
+.hidden {
+  display: none;
+}
+
 .container-app {
   display: flex;
   flex-direction: column;
