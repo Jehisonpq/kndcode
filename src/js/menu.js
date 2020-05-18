@@ -1,8 +1,7 @@
-const hamburger = document.querySelector(".hamburger");
-const menu = document.getElementById("list-menu");
-const scroll = document.getElementById("scroll");
-
 function menuHamburger() {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.getElementById("list-menu");
+  const scroll = document.getElementById("scroll");
   if (screen.width > 992) {
     menu.classList.add("active");
     hamburger.classList.add("is-active");
@@ -19,6 +18,9 @@ function menuHamburger() {
 }
 
 function menuMobileHidde() {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.getElementById("list-menu");
+  const scroll = document.getElementById("scroll");
   const links = document.querySelectorAll(
     "nav .list-menu ul.primary-menu li a"
   );
