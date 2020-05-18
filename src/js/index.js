@@ -13,11 +13,24 @@ window.onload = function () {
   allScroll();
   menuScroll();
 
-  changeImage("#section-about", "#section-images-about");
+  const seccionesHome = document.getElementsByClassName("section-home-int");
+  const seccionesImages = document.getElementsByClassName("section-images");
+
+  for (let i = 0; i < seccionesHome.length; i++) {
+    let seccion = seccionesHome[i];
+    let imagen = seccionesImages[i];
+
+    let idSeccion = `#${seccion.getAttribute("id")}`;
+    let idSeccionImagen = `#${imagen.getAttribute("id")}`;
+
+    changeImage(idSeccion, idSeccionImagen);
+  }
+
+  /*changeImage("#section-about", "#section-images-about");
   changeImage("#section-techno", "#section-images-techno");
   changeImage("#section-services", "#section-images-services");
   changeImage("#section-cases", "#section-images-cases");
-  changeImage("#section1");
+  changeImage("#section1");*/
 
   sliderMobile();
   allSliders();
