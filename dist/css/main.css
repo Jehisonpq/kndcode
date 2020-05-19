@@ -836,6 +836,7 @@ header .logo .container-1-logo.small {
 .lang li {
   margin-bottom: 15px;
   list-style: none;
+  opacity: 0.5;
   cursor: pointer;
 }
 @media (max-width: 992px) {
@@ -844,12 +845,17 @@ header .logo .container-1-logo.small {
     font-size: 20px;
   }
 }
-.lang li:last-child {
-  opacity: 0.5;
-}
 .lang li a {
   color: white;
   text-decoration: none;
+}
+
+body.en .lang li:first-child {
+  opacity: 1;
+}
+
+body.es .lang li:last-child {
+  opacity: 1;
 }
 
 .content-section1 {
