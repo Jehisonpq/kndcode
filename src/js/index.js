@@ -13,20 +13,22 @@ window.onload = function () {
   allScroll();
   menuScroll();
 
-  const seccionesHome = document.getElementsByClassName("section-home-int");
-  const seccionesImages = document.getElementsByClassName("section-images");
+  if (this.document.getElementById("scroll")) {
+    const seccionesHome = document.getElementsByClassName("section-home-int");
+    const seccionesImages = document.getElementsByClassName("section-images");
 
-  for (let i = 0; i < seccionesHome.length; i++) {
-    let seccion = seccionesHome[i];
-    let imagen = seccionesImages[i];
+    for (let i = 0; i < seccionesHome.length; i++) {
+      let seccion = seccionesHome[i];
+      let imagen = seccionesImages[i];
 
-    let idSeccion = `#${seccion.getAttribute("id")}`;
-    let idSeccionImagen = `#${imagen.getAttribute("id")}`;
+      let idSeccion = `#${seccion.getAttribute("id")}`;
+      let idSeccionImagen = `#${imagen.getAttribute("id")}`;
 
-    changeImage(idSeccion, idSeccionImagen);
+      changeImage(idSeccion, idSeccionImagen);
+    }
+
+    changeImage("#section1");
   }
-
-  changeImage("#section1");
 
   const modales = document.querySelectorAll("[data-toggle='modal']");
 
@@ -40,6 +42,24 @@ window.onload = function () {
       modalContainer.innerHTML = contenido;
     });
   }
+
+  /*Modulo Crapusel Interna*/
+  jQuery(".module-carousel ul").slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  $("[data-fancybox]").fancybox();
 
   sliderMobile();
   allSliders();

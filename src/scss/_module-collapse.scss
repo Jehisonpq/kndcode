@@ -1,0 +1,24 @@
+.module-collapse {
+  .card {
+    background-color: transparent;
+    border: none;
+    .card-header {
+      border-bottom: 1px solid $primaryColor;
+      h5 {
+        font-family: "Playfair Display", serif;
+        .btn-link {
+          font-size: 25px;
+          color: white;
+          text-decoration: none;
+          width: 100%;
+          text-align: left;
+          background: url(../images/down-arrow.svg) no-repeat right;
+          background-size: 20px;
+          padding-right: 40px;
+          white-space: normal;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

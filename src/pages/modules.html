@@ -3,35 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
     <title>Modulos</title>
   </head>
   <body>
     <div class="container-app">
-      <section class="module-intro"></section>
-      <section class="module-banner"></section>
-      <section class="module-video">
-        <div class="container-image">
-          <img src="images/fondo-video.jpg" alt="" />
-        </div>
-        <div class="container-info">
-          <div class="container-text">
-            <h3 class="title">TECHNOLOGIES</h3>
-            <h2 class="text">
-              Application development in multiple technologies.
-            </h2>
-          </div>
-          <div class="container-icon">
-            <div class="play">
-              <p>PLAY VIDEO</p>
-              <img src="images/icon-play.png" alt="" />
+      <header>
+        <div class="logo">
+          <div class="container-1-logo">
+            <div class="container-2-logo">
+              <img src="images/logo.png" alt="" id="logo" />
             </div>
           </div>
         </div>
+        <nav id="menu" class="menu">
+          <div id="list-menu" class="list-menu">
+            <ul class="primary-menu">
+              <li><a class="active" href="#section1">Home</a></li>
+              <li><a href="#section-about">About us</a></li>
+              <li><a href="#section-techno">Technologies</a></li>
+              <li><a href="#section-services">Services</a></li>
+              <li><a href="#section-cases">Cases</a></li>
+              <li>
+                <a href="#section3"><img src="images/mail.png" alt="" /></a>
+              </li>
+            </ul>
+            <ul class="lang">
+              <li><a href="#">EN</a></li>
+              <li><a href="#">ES</a></li>
+            </ul>
+            <ul class="social-media">
+              <li>
+                <a href="#"><img src="images/icon-twitter.png" alt="" /> </a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon-facebook.png" alt="" /> </a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon-instagram.png" alt="" /> </a>
+              </li>
+            </ul>
+          </div>
+          <button class="hamburger hamburger--slider" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </nav>
+      </header>
+      <section class="module module-intro"></section>
+      <section class="module module-banner"></section>
+      <section class="module module-video">
+        <div class="container-image">
+          <img src="images/fondo-video.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="container-info">
+          <div class="container-text">
+            <div class="info">
+              <h3 class="subtitle">TECHNOLOGIES</h3>
+              <h2 class="title">
+                Application development in multiple technologies.
+              </h2>
+            </div>
+          </div>
+          <div class="container-icon">
+            <a
+              data-fancybox
+              class="play"
+              href="https://www.youtube.com/watch?v=amrb9L48wN8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0"
+            >
+              <img src="images/icon-play.png" alt="" />
+              <p>PLAY VIDEO</p>
+            </a>
+          </div>
+        </div>
       </section>
-      <section class="module-basic">
+      <section class="module module-basic">
         <div class="container">
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <h3 class="subtitle">TECHNOLOGIES</h3>
               <h2 class="title">
                 Application development in <span>multiple technologies.</span>
@@ -40,24 +103,27 @@
                 We usually work for application development companies, IT
                 companies or technology companies and follows their technology
                 of choice. We are currently working in the technologies listed
-                below. In case a specific technology is not available, our HR
-                department recruits as per client specification. Insoft also has
-                partnerships with all major training institutions and
-                Universities, where current staff are retrained if required on
-                short notice by certified instructors.
+                below. <br /><br />
+
+                In case a specific technology is not available, our HR
+                department recruits as per client specification. <br /><br />
+
+                Insoft also has partnerships with all major training
+                institutions and Universities, where current staff are retrained
+                if required on short notice by certified instructors.
               </p>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <img class="img-fluid" src="images/mobile.png" alt="" />
             </div>
           </div>
         </div>
       </section>
-      <section class="module-carousel">
+      <section class="module module-carousel">
         <ul>
           <li>
             <div class="container-image">
-              <img src="images/carousel1.jpg" alt="" />
+              <img src="images/carousel1.jpg" class="img-fluid" alt="" />
             </div>
             <div class="container-info">
               <h2 class="title">Application Development</h2>
@@ -69,7 +135,7 @@
           </li>
           <li>
             <div class="container-image">
-              <img src="images/carousel1.jpg" alt="" />
+              <img src="images/carousel1.jpg" class="img-fluid" alt="" />
             </div>
             <div class="container-info">
               <h2 class="title">Application Development</h2>
@@ -81,7 +147,31 @@
           </li>
           <li>
             <div class="container-image">
-              <img src="images/carousel1.jpg" alt="" />
+              <img src="images/carousel1.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="container-info">
+              <h2 class="title">Application Development</h2>
+              <p class="text">
+                We usually work for application development companies, IT
+                companies or technology.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="container-image">
+              <img src="images/carousel1.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="container-info">
+              <h2 class="title">Application Development</h2>
+              <p class="text">
+                We usually work for application development companies, IT
+                companies or technology.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="container-image">
+              <img src="images/carousel1.jpg" class="img-fluid" alt="" />
             </div>
             <div class="container-info">
               <h2 class="title">Application Development</h2>
@@ -93,35 +183,37 @@
           </li>
         </ul>
       </section>
-      <section class="module-icons">
-        <ul>
-          <li>
-            <img src="images/icon1.png" alt="" />
-            <h2>CSS3</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </li>
-          <li>
-            <img src="images/icon2.png" alt="" />
-            <h2>CSS3</h2>
-            <p>
-              Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </p>
-          </li>
-          <li>
-            <img src="images/icon3.png" alt="" />
-            <h2>CSS3</h2>
-            <p>
-              Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore.
-            </p>
-          </li>
-        </ul>
+      <section class="module module-icons">
+        <div class="container">
+          <ul class="container">
+            <li>
+              <img src="images/icon1.png" alt="" />
+              <h2>CSS3</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </li>
+            <li>
+              <img src="images/icon2.png" alt="" />
+              <h2>HTML5</h2>
+              <p>
+                Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </li>
+            <li>
+              <img src="images/icon3.png" alt="" />
+              <h2>MICROSOFT</h2>
+              <p>
+                Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section class="module-collapse">
+      <section class="module module-collapse">
         <div class="container" id="accordion">
           <div class="card">
             <div class="card-header" id="headingOne">
@@ -307,7 +399,7 @@
       </section>
     </div>
     <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
@@ -321,5 +413,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
