@@ -1,0 +1,63 @@
+.module-intro,
+.module-banner {
+  margin-top: 0;
+  .banner {
+    position: relative;
+    .container-img {
+      opacity: 0.8;
+      height: 500px;
+      background: #1d1e21;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .container-text {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .title,
+      .copy {
+        width: 50%;
+        height: 100%;
+      }
+      .copy {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p {
+          padding-left: 15px;
+          max-width: 210px;
+          font-size: 20px;
+          line-height: 1.2;
+        }
+      }
+      .title {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        h2 {
+          font-family: "Bebas Neue";
+          font-size: 80px;
+          padding-right: 15px;
+          text-align: right;
+          max-width: 360px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  .content-info {
+    background: #090e1a;
+    padding: 80px 60px;
+    margin-top: -80px;
+    h2.title {
+      margin-bottom: 40px;
+      max-width: 300px;
+    }
+  }
+}

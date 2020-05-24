@@ -59,7 +59,9 @@ window.onload = function () {
     ],
   });
 
-  $("[data-fancybox]").fancybox();
+  if (this.document.querySelector(".no-front")) {
+    $("[data-fancybox]").fancybox();
+  }
 
   sliderMobile();
   allSliders();
