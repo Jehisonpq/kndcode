@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 20px;
   left: 50%;
-  margin-left: -8px;
-  width: 17px;
+  margin-left: -15px;
+  width: 30px;
   color: white;
   font-family: "Bebas Neue", cursive;
   font-size: 14px;
@@ -17,13 +17,27 @@
     transform: rotate(270deg);
     line-height: 0.5;
     color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
     @media (max-width: 992px) {
       display: none;
     }
   }
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 7px;
+  }
   a {
     color: white;
     text-decoration: none;
+    width: 30px;
+    height: 80px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   &:hover {
     opacity: 0.6;

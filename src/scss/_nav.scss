@@ -74,6 +74,7 @@ header {
           font-weight: 500;
           position: relative;
           text-rendering: geometricPrecision;
+          pointer-events: none;
           @media (max-width: 992px) {
             font-size: 23px;
           }
@@ -105,6 +106,9 @@ header {
       ul.primary-menu {
         height: 25px;
         opacity: 1;
+        a {
+          pointer-events: auto;
+        }
         @media (max-width: 992px) {
           height: auto;
         }

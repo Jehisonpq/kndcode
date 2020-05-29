@@ -22,3 +22,17 @@
     }
   }
 }
+
+.theme-white {
+  .module-collapse {
+    .card {
+      .card-header {
+        h5 {
+          .btn-link {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}

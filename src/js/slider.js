@@ -8,15 +8,15 @@ const allSliders = () => {
 };
 
 const sliderMobile = () => {
-  if (screen.width < 992) {
-    const images = document.querySelectorAll(".section-left .section-home");
-    for (var i = 0; i < images.length; i++) {
-      images[i].appendChild(
-        document.querySelector(
-          ".section-right div[id-data=" + images[i].getAttribute("id") + "]"
-        )
-      );
-    }
+  const images = document.querySelectorAll(".section-left .section-home");
+  for (var i = 0; i < images.length; i++) {
+    let original = document.querySelector(
+      ".section-right div[id-data=" + images[i].getAttribute("id") + "]"
+    );
+    let nuevo = original.cloneNode(true);
+    nuevo.setAttribute("id", nuevo.getAttribute("id") + 1);
+
+    images[i].appendChild(nuevo);
   }
 };
 

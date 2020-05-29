@@ -16,3 +16,15 @@
     }
   }
 }
+
+.theme-white {
+  .module {
+    color: $textPrimary-w;
+    h3.subtitle {
+      color: #474646;
+    }
+    h2.title {
+      color: $primaryColor;
+    }
+  }
+}

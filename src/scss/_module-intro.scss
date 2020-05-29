@@ -61,3 +61,23 @@
     }
   }
 }
+
+.theme-white {
+  .module-intro,
+  .module-banner {
+    .banner {
+      .container-img {
+        opacity: 1;
+      }
+      .container-text {
+        .title,
+        .copy {
+          color: white;
+        }
+      }
+    }
+    .content-info {
+      background: white;
+    }
+  }
+}

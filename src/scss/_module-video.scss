@@ -1,9 +1,14 @@
 .module-video {
   min-height: 400px;
   background: #383838;
+  height: 580px;
   .container-image {
+    width: 100%;
+    height: 100%;
     img {
+      object-fit: cover;
       width: 100%;
+      height: 100%;
     }
     &::after {
       content: "";
@@ -80,6 +85,16 @@
         &:hover {
           opacity: 0.5;
         }
+      }
+    }
+  }
+}
+
+.theme-white {
+  .container-info {
+    .container-text {
+      h3.subtitle {
+        color: white;
       }
     }
   }

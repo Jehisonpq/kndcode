@@ -57,3 +57,31 @@
     }
   }
 }
+
+.theme-white {
+  .module-carousel {
+    .slick-slide {
+      .container-info {
+        opacity: 0.4;
+        h2,
+        p {
+          color: white;
+        }
+      }
+      .container-image {
+        opacity: 0.3;
+      }
+      &.slick-current {
+        .container-info {
+          opacity: 1;
+        }
+        li {
+          background: black;
+          .container-image {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

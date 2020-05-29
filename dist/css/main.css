@@ -363,11 +363,12 @@ body.theme-white {
 }
 .container-app .section.section3 {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
+  height: 860px;
   z-index: 1;
   background: url(../images/fondo-contacto.jpg) #090f1a;
   background-size: cover;
-  padding: 150px 0 50px 0;
+  padding: 200px 0 150px 0;
 }
 .container-app .section.section3 .info-section {
   text-align: right;
@@ -390,28 +391,27 @@ body.theme-white {
   }
 }
 .section-left .section-home-int {
-  padding: 110px 0 30px 0;
+  padding: 22vh 0 30px 0;
   position: relative;
 }
 .section-left .section-home-int .container-title {
   transform: rotate(-90deg) translate3d(0%, 0%, 0);
   position: absolute;
-  top: 70%;
+  top: 30vh;
   transition: 0.3s;
-  right: 28px;
+  right: 37px;
   transform-origin: top right;
   z-index: 1;
 }
 @media (max-width: 992px) {
   .section-left .section-home-int .container-title {
     right: 33px;
-    top: 10% !important;
   }
 }
 .section-left .section-home-int .container-title .title-section {
   text-transform: uppercase;
   font-family: "Bebas Neue";
-  font-size: 45px;
+  font-size: 50px;
   line-height: 1;
   color: white;
 }
@@ -425,7 +425,11 @@ body.theme-white {
 }
 .section-left .section-home-int .container-info .title {
   margin-bottom: 50px;
-  max-width: 350px;
+  max-width: 300px;
+}
+.section-left .section-home-int .container-info p {
+  max-width: 450px;
+  line-height: 1.8;
 }
 .section-left .section-images {
   width: 100%;
@@ -436,6 +440,12 @@ body.theme-white {
   background: #090f1a;
   position: relative;
   margin-top: 60px;
+  display: none;
+}
+@media (max-width: 992px) {
+  .section-left .section-images {
+    display: block;
+  }
 }
 .section-left .section-images * {
   opacity: 1 !important;
@@ -483,7 +493,7 @@ body.theme-white {
 .section-right {
   position: fixed;
   height: 100vh;
-  width: 50vw;
+  width: 50%;
   top: 0;
   right: 0;
   color: white;
@@ -543,20 +553,33 @@ body.theme-white {
   color: gray;
 }
 .theme-white .container-app .section.section3 {
+  background: url(../images/fondo-contacto-white.jpg) white;
+}
+.theme-white .section-right .section-images {
   background: white;
 }
 .theme-white .section-left .section-home-int .container-title {
-  right: 4px;
+  right: 6px;
 }
 
-.section1 video {
-  z-index: -1;
-  opacity: 0;
+.section1 .video-content {
   position: absolute;
-  right: 0;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+.section1 .video-content video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  min-height: 50%;
+  min-width: 50%;
+  opacity: 0;
 }
 
 .modal-content {
@@ -691,6 +714,7 @@ header .logo .container-1-logo.small {
   font-weight: 500;
   position: relative;
   text-rendering: geometricPrecision;
+  pointer-events: none;
 }
 @media (max-width: 992px) {
   .menu .list-menu ul.primary-menu li a {
@@ -724,6 +748,9 @@ header .logo .container-1-logo.small {
   height: 25px;
   opacity: 1;
 }
+.menu .list-menu.active ul.primary-menu a {
+  pointer-events: auto;
+}
 @media (max-width: 992px) {
   .menu .list-menu.active ul.primary-menu {
     height: auto;
@@ -745,8 +772,8 @@ header .logo .container-1-logo.small {
   position: fixed;
   bottom: 20px;
   left: 50%;
-  margin-left: -8px;
-  width: 17px;
+  margin-left: -15px;
+  width: 30px;
   color: white;
   font-family: "Bebas Neue", cursive;
   font-size: 14px;
@@ -761,15 +788,29 @@ header .logo .container-1-logo.small {
   transform: rotate(270deg);
   line-height: 0.5;
   color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
 }
 @media (max-width: 992px) {
   .scroll p {
     display: none;
   }
 }
+.scroll img {
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+}
 .scroll a {
   color: white;
   text-decoration: none;
+  width: 30px;
+  height: 80px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .scroll:hover {
   opacity: 0.6;
@@ -837,6 +878,7 @@ header .logo .container-1-logo.small {
   margin-bottom: 15px;
   list-style: none;
   opacity: 0.5;
+  transition: 0.3s;
   cursor: pointer;
 }
 @media (max-width: 992px) {
@@ -848,6 +890,12 @@ header .logo .container-1-logo.small {
 .lang li a {
   color: white;
   text-decoration: none;
+}
+.lang li:hover {
+  opacity: 1;
+}
+.lang li:hover a {
+  color: #27aae1;
 }
 
 body.en .lang li:first-child {
@@ -1000,6 +1048,7 @@ body.es .lang li:last-child {
   position: absolute;
   height: auto;
   z-index: 99999;
+  color: white;
   transition: 0.2s cubic-bezier(0.67, 0.02, 0.2, 0.97);
 }
 .section-left .slider .container-slide .btn-more {
@@ -1157,12 +1206,29 @@ body.es .lang li:last-child {
   color: #27aae1;
 }
 
+.theme-white .module {
+  color: gray;
+}
+.theme-white .module h3.subtitle {
+  color: #474646;
+}
+.theme-white .module h2.title {
+  color: #27aae1;
+}
+
 .module-video {
   min-height: 400px;
   background: #383838;
+  height: 580px;
+}
+.module-video .container-image {
+  width: 100%;
+  height: 100%;
 }
 .module-video .container-image img {
+  object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 .module-video .container-image::after {
   content: "";
@@ -1234,6 +1300,10 @@ body.es .lang li:last-child {
   opacity: 0.5;
 }
 
+.theme-white .container-info .container-text h3.subtitle {
+  color: white;
+}
+
 .module-basic h2.title {
   margin-bottom: 40px;
   max-width: 300px;
@@ -1289,6 +1359,26 @@ body.es .lang li:last-child {
   filter: grayscale(0%);
 }
 
+.theme-white .module-carousel .slick-slide .container-info {
+  opacity: 0.4;
+}
+.theme-white .module-carousel .slick-slide .container-info h2,
+.theme-white .module-carousel .slick-slide .container-info p {
+  color: white;
+}
+.theme-white .module-carousel .slick-slide .container-image {
+  opacity: 0.3;
+}
+.theme-white .module-carousel .slick-slide.slick-current .container-info {
+  opacity: 1;
+}
+.theme-white .module-carousel .slick-slide.slick-current li {
+  background: black;
+}
+.theme-white .module-carousel .slick-slide.slick-current li .container-image {
+  opacity: 0.7;
+}
+
 .module-icons ul {
   padding: 0;
   margin: 0;
@@ -1338,6 +1428,10 @@ body.es .lang li:last-child {
   padding-right: 40px;
   white-space: normal;
   padding-left: 0;
+}
+
+.theme-white .module-collapse .card .card-header h5 .btn-link {
+  color: #27aae1;
 }
 
 .module-intro,
@@ -1414,6 +1508,21 @@ body.es .lang li:last-child {
 .module-banner .content-info h2.title {
   margin-bottom: 40px;
   max-width: 300px;
+}
+
+.theme-white .module-intro .banner .container-img,
+.theme-white .module-banner .banner .container-img {
+  opacity: 1;
+}
+.theme-white .module-intro .banner .container-text .title,
+.theme-white .module-intro .banner .container-text .copy,
+.theme-white .module-banner .banner .container-text .title,
+.theme-white .module-banner .banner .container-text .copy {
+  color: white;
+}
+.theme-white .module-intro .content-info,
+.theme-white .module-banner .content-info {
+  background: white;
 }
 
 .btn-primary {

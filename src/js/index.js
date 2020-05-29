@@ -1,8 +1,9 @@
 import "../scss/main.scss";
 
-import { menuHamburger, menuMobileHidde } from "./menu";
+import { menuHamburger, menuMobileHidde, menuScroll } from "./menu";
 import init from "./intro";
-import { allScroll, menuScroll, changeImage } from "./scroll";
+import { animationElementsScroll, changeHrefScroll } from "./scroll";
+import { changeImage } from "./sliderVertical";
 import { allSliders, sliderMobile } from "./slider";
 
 window.onload = function () {
@@ -10,8 +11,10 @@ window.onload = function () {
 
   menuHamburger();
   menuMobileHidde();
-  allScroll();
   menuScroll();
+
+  changeHrefScroll();
+  animationElementsScroll();
 
   if (this.document.getElementById("scroll")) {
     const seccionesHome = document.getElementsByClassName("section-home-int");
@@ -35,7 +38,6 @@ window.onload = function () {
   for (let i = 0; i < modales.length; i++) {
     let modal = modales[i];
     modal.addEventListener("click", function () {
-      console.log("abrio modal");
       let contenido = this.nextSibling.nextElementSibling.innerHTML;
       let modalContainer = document.querySelector(".modal-body");
 
@@ -43,7 +45,14 @@ window.onload = function () {
     });
   }
 
-  /*Modulo Crapusel Interna*/
+  sliderMobile();
+  allSliders();
+
+  if (screen.width > 992) {
+    jQuery('[data-toggle="tooltip"]').tooltip();
+  }
+
+  /*Modulo Carusel Interna*/
   jQuery(".module-carousel ul").slick({
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -63,10 +72,5 @@ window.onload = function () {
     $("[data-fancybox]").fancybox();
   }
 
-  sliderMobile();
-  allSliders();
-
-  if (screen.width > 992) {
-    jQuery('[data-toggle="tooltip"]').tooltip();
-  }
+  window.scrollTo(0, 0);
 };
