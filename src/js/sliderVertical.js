@@ -1,5 +1,46 @@
+const hash = location.hash;
+const secciones = document.getElementsByClassName("section-home");
+
+const imageVisibleFromHashtag = () => {
+  if (hash) {
+    const sectionsImages = document.querySelectorAll(
+      ".section-right .section-images"
+    );
+
+    for (let i = 0; i < sectionsImages.length; i++) {
+      let image = sectionsImages[i];
+      let idImage = "#" + image.getAttribute("id-data");
+
+      if (idImage == hash) {
+        jQuery(image).addClass("visible");
+        searchNextHref(hash);
+      }
+    }
+  }
+};
+
+const sliderVertical = () => {
+  if (document.querySelector(".path-frontpage")) {
+    const seccionesHome = document.getElementsByClassName("section-home-int");
+    const seccionesImages = document.getElementsByClassName("section-images");
+
+    for (let i = 0; i < seccionesHome.length; i++) {
+      let seccion = seccionesHome[i];
+      let imagen = seccionesImages[i];
+
+      let idSeccion = `#${seccion.getAttribute("id")}`;
+      let idSeccionImagen = `#${imagen.getAttribute("id")}`;
+
+      changeImage(idSeccion, idSeccionImagen);
+    }
+
+    changeImage("#section1");
+  }
+};
+
 const changeImage = (id1, id2) => {
-  const secciones = document.getElementsByClassName("section-home");
+  const idFirstSeccion =
+    "#" + document.querySelector(".section-images").getAttribute("id");
 
   jQuery(window).scroll(function () {
     let top_of_element = jQuery(id1).offset().top;
@@ -14,15 +55,12 @@ const changeImage = (id1, id2) => {
         jQuery(id2).addClass("visible");
       }
 
-      for (const seccion in secciones) {
-        if (secciones[seccion].id === id1.split("#")[1]) {
-          const idNextSection = "#" + secciones[parseInt(seccion) + 1].id;
-          setHrefBtnScroll(idNextSection);
-        }
-      }
+      searchNextHref(id1);
     } else {
       if (id2) {
-        jQuery(id2).removeClass("visible");
+        if (id2 != idFirstSeccion) {
+          jQuery(id2).removeClass("visible");
+        }
       }
     }
 
@@ -33,10 +71,21 @@ const changeImage = (id1, id2) => {
         400
     ) {
       document.getElementById("scroll").style.display = "none";
+      document.querySelector(".scroll-top").classList.add("visible");
     } else {
       document.getElementById("scroll").style.display = "block";
+      document.querySelector(".scroll-top").classList.remove("visible");
     }
   });
+};
+
+const searchNextHref = (id1) => {
+  for (const seccion in secciones) {
+    if (secciones[seccion].id === id1.split("#")[1]) {
+      const idNextSection = "#" + secciones[parseInt(seccion) + 1].id;
+      setHrefBtnScroll(idNextSection);
+    }
+  }
 };
 
 const setHrefBtnScroll = (idNextSection) => {
@@ -44,4 +93,4 @@ const setHrefBtnScroll = (idNextSection) => {
   btnScroll.setAttribute("href", idNextSection);
 };
 
-export { changeImage };
+export { sliderVertical, imageVisibleFromHashtag };

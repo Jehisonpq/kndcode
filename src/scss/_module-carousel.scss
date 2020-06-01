@@ -4,6 +4,11 @@
     li {
       list-style: none;
       position: relative;
+      a {
+        color: white;
+        outline: 0;
+        transition: 0.3s;
+      }
       .container-image {
         transition: 0.3s;
         &::before {
@@ -27,8 +32,16 @@
         left: 0;
         padding: 60px;
         transition: 0.3s;
+        @media (max-width: $maxWidth) {
+          padding: 20px;
+        }
         .title {
           margin-bottom: 40px;
+          max-width: 250px;
+        }
+        p {
+          max-width: 350px;
+          line-height: 1.5;
         }
       }
     }
@@ -52,6 +65,9 @@
         opacity: 0.6;
         img {
           filter: grayscale(0%);
+        }
+        &:hover {
+          opacity: 0.3;
         }
       }
     }

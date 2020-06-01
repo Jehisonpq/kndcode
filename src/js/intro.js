@@ -28,32 +28,32 @@ const animation = () => {
       ".copy2 p",
       { opacity: 0, x: -100 },
       { ease: "back", duration: 1, opacity: 1, x: 0 },
-      0.5
+      0.2
     )
 
     .fromTo(
       "#logo",
       { opacity: 0, x: -50 },
       { ease: "back", duration: 1.5, opacity: 1, x: 0 },
-      1
+      0.6
     )
     .fromTo(
       "#menu",
       { opacity: 0, x: 50 },
       { ease: "back", duration: 1.5, opacity: 1, x: 0 },
-      1.2
+      0.8
     )
     .fromTo(
       ".social-media",
       { opacity: 0, x: -50 },
       { ease: "back", duration: 1.5, opacity: 1, x: 0 },
-      1.4
+      1
     )
     .fromTo(
       ".lang",
       { opacity: 0, x: 50 },
       { ease: "back", duration: 1, opacity: 1.5, x: 0 },
-      1.6
+      1.1
     )
     .fromTo(".scroll", { opacity: 0 }, { ease: "back.inOut", opacity: 1 }, 2.8);
 
@@ -61,4 +61,4 @@ const animation = () => {
   gsap.to(".btn-more", { scale: 0.6, duration: 0.8, yoyo: true, repeat: -1 });
 };
 
-export default init;
+export default animation;

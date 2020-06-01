@@ -1,8 +1,10 @@
+import { maxWidth } from "./variables";
+
 function menuHamburger() {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.getElementById("list-menu");
   const scroll = document.getElementById("scroll");
-  if (screen.width > 992) {
+  if (screen.width > maxWidth) {
     menu.classList.add("active");
     hamburger.classList.add("is-active");
   }
@@ -11,7 +13,7 @@ function menuHamburger() {
     hamburger.classList.toggle("is-active");
     menu.classList.toggle("active");
 
-    if (screen.width < 992) {
+    if (screen.width < maxWidth) {
       scroll.classList.toggle("no-visible");
     }
   });
@@ -40,7 +42,7 @@ const menuScroll = () => {
     const hamburger = document.querySelector(".hamburger");
     const menu = document.getElementById("list-menu");
 
-    if (screen.width > 992) {
+    if (screen.width > maxWidth) {
       if (scroll > 100) {
         hamburger.classList.remove("is-active");
         menu.classList.remove("active");

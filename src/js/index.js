@@ -1,37 +1,25 @@
 import "../scss/main.scss";
 
+import { maxWidth } from "./variables";
 import { menuHamburger, menuMobileHidde, menuScroll } from "./menu";
-import init from "./intro";
-import { animationElementsScroll, changeHrefScroll } from "./scroll";
-import { changeImage } from "./sliderVertical";
+import animation from "./intro";
+import { animationElementsScroll, changeHrefScroll, scrollTop } from "./scroll";
+import { sliderVertical, imageVisibleFromHashtag } from "./sliderVertical";
 import { allSliders, sliderMobile } from "./slider";
 
 window.onload = function () {
-  init();
+  animation();
 
   menuHamburger();
   menuMobileHidde();
   menuScroll();
+  scrollTop();
 
   changeHrefScroll();
   animationElementsScroll();
 
-  if (this.document.getElementById("scroll")) {
-    const seccionesHome = document.getElementsByClassName("section-home-int");
-    const seccionesImages = document.getElementsByClassName("section-images");
-
-    for (let i = 0; i < seccionesHome.length; i++) {
-      let seccion = seccionesHome[i];
-      let imagen = seccionesImages[i];
-
-      let idSeccion = `#${seccion.getAttribute("id")}`;
-      let idSeccionImagen = `#${imagen.getAttribute("id")}`;
-
-      changeImage(idSeccion, idSeccionImagen);
-    }
-
-    changeImage("#section1");
-  }
+  sliderVertical();
+  imageVisibleFromHashtag();
 
   const modales = document.querySelectorAll("[data-toggle='modal']");
 
@@ -48,7 +36,7 @@ window.onload = function () {
   sliderMobile();
   allSliders();
 
-  if (screen.width > 992) {
+  if (screen.width > maxWidth) {
     jQuery('[data-toggle="tooltip"]').tooltip();
   }
 
@@ -59,7 +47,7 @@ window.onload = function () {
     centerMode: true,
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: maxWidth,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -71,6 +59,4 @@ window.onload = function () {
   if (this.document.querySelector(".no-front")) {
     $("[data-fancybox]").fancybox();
   }
-
-  window.scrollTo(0, 0);
 };

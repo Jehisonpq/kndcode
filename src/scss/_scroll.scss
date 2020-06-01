@@ -20,7 +20,7 @@
     position: absolute;
     bottom: 20px;
     left: 0px;
-    @media (max-width: 992px) {
+    @media (max-width: $maxWidth) {
       display: none;
     }
   }
@@ -41,5 +41,26 @@
   }
   &:hover {
     opacity: 0.6;
+  }
+}
+
+.scroll-top {
+  background: url("../images/up-arrow.svg") white center no-repeat;
+  background-size: 20px;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+  &:hover {
+    background-color: $primaryColor;
+  }
+  &.visible {
+    display: block;
   }
 }

@@ -3,14 +3,14 @@
     padding: 0;
     margin: 0;
     display: flex;
-    @media (max-width: 992px) {
+    @media (max-width: $maxWidth) {
       flex-direction: column;
     }
     li {
       list-style: none;
       text-align: center;
       padding: 0 40px;
-      @media (max-width: 992px) {
+      @media (max-width: $maxWidth) {
         margin-bottom: 30px;
       }
       img {

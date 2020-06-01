@@ -9,7 +9,7 @@
   list-style: none;
   z-index: 2;
   opacity: 0;
-  @media (max-width: 992px) {
+  @media (max-width: $maxWidth) {
     position: relative;
     bottom: auto;
     left: auto;

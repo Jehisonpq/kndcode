@@ -1,13 +1,15 @@
 import ScrollReveal from "scrollreveal";
 
 const changeHrefScroll = () => {
-  const enlace = document
-    .querySelector("#section2 .section-home")
-    .getAttribute("id");
+  if (document.querySelector(".path-frontpage")) {
+    const enlace = document
+      .querySelector("#section2 .section-home")
+      .getAttribute("id");
 
-  const linkScroll = document.querySelector("#scroll a");
+    const linkScroll = document.querySelector("#scroll a");
 
-  linkScroll.setAttribute("href", "#" + enlace);
+    linkScroll.setAttribute("href", "#" + enlace);
+  }
 };
 
 const animationElementsScroll = () => {
@@ -24,4 +26,16 @@ const animationElementsScroll = () => {
   ScrollReveal().reveal(".section3 p", { reset: true });
 };
 
-export { animationElementsScroll, changeHrefScroll };
+const scrollTop = () => {
+  const body = document.querySelector("body");
+  const iconScrollTop = document.createElement("div");
+  iconScrollTop.classList.add("scroll-top");
+
+  iconScrollTop.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+  });
+
+  body.appendChild(iconScrollTop);
+};
+
+export { animationElementsScroll, changeHrefScroll, scrollTop };
